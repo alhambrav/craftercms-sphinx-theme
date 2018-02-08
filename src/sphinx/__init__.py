@@ -1,6 +1,6 @@
 """
 Sphinx theme for CrafterCMS docs.
-From https://github.com/rart/craftercms-sphinx-theme.
+From https://github.com/craftercms/craftercms-sphinx-theme.
 """
 
 from os import path

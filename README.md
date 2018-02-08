@@ -19,7 +19,7 @@ to work on the front end of the theme. This system as the following features:
 
 ### Prerequisites
 
-To use this, you need needs:
+To use this, you need:
 
 - [NodeJS](https://nodejs.org/en/) (0.12 or greater)
 - [Git](https://git-scm.com/)
@@ -41,8 +41,7 @@ work on styling.
 
 At `src/assets/*` you'll find the other important parts ([s]css, js, imgs).
 
-As for the sphinx theme itself, see `src/sphinx`. The `craftercms_sphinx_theme/` directory is the
-build output to make into a python package (explained below).
+As for the sphinx theme itself, see `src/sphinx`.
 
 ## Build
 

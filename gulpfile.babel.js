@@ -6,7 +6,6 @@ import browser       from 'browser-sync';
 import gulp          from 'gulp';
 import panini        from 'panini';
 import rimraf        from 'rimraf';
-import sherpa        from 'style-sherpa';
 import yaml          from 'js-yaml';
 import fs            from 'fs';
 import webpackStream from 'webpack-stream';
@@ -40,8 +39,7 @@ gulp.task('build:update-css', sass);
 gulp.task('build', gulp.series(
   clean,
   gulp.parallel(pages, sass, javascript, images, copy),
-  rmDistSCSS,
-  styleGuide));
+  rmDistSCSS));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -88,14 +86,6 @@ function resetPages(done) {
   done();
 }
 
-// Generate a style guide from the Markdown content and HTML template in styleguide/
-function styleGuide(done) {
-  sherpa('src/styleguide/index.md', {
-    output: PATHS.dist + '/styleguide.html',
-    template: 'src/styleguide/template.html'
-  }, done);
-}
-
 // Compile Sass into CSS
 // In production, the CSS is compressed
 function sass() {
@@ -108,8 +98,7 @@ function sass() {
     .pipe($.autoprefixer({
       browsers: COMPATIBILITY
     }))
-    // Comment in the pipe below to run UnCSS in production
-    //.pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
+    //.pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS))) // <-- Uncomment to run UnCSS in production
     .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/static/css'))
@@ -176,5 +165,4 @@ function watch() {
   gulp.watch('src/static/scss/**/*.scss').on('all', sass);
   gulp.watch('src/static/js/**/*.js').on('all', gulp.series(javascript, browser.reload));
   gulp.watch('src/static/img/**/*').on('all', gulp.series(images, browser.reload));
-  gulp.watch('src/styleguide/**').on('all', gulp.series(styleGuide, browser.reload));
 }

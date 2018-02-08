@@ -10,10 +10,10 @@ from setuptools import setup
 
 setup(
     name='craftercms_sphinx_theme',
-    description='Crafter CMS Docs theme for Sphinx',
-    version='1.1.3a1',
+    description='Crafter CMS Docs theme for Sphinx Doc',
+    version='1.0.0',
     url='https://github.com/craftercms/craftercms-sphinx-theme/',
-    license='GNU',
+    license='GPL 3.0',
     author='Roy Art',
     author_email='royart@me.com',
     long_description=open('README.rst', encoding='utf-8').read(),
@@ -41,9 +41,9 @@ setup(
         #   3 - Alpha
         #   4 - Beta
         #   5 - Production/Stable
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 5 - Production/Stable',
 
-        'License :: OSI Approved :: MIT License',
+        'License :: OSI Approved :: GPL 3.0',
 
         'Environment :: Console',
         'Environment :: Web Environment',

@@ -9,7 +9,7 @@
     "build": "gulp build --production"
   },
   "author": "Roy Art <royart@me.com>",
-  "license": "GNU",
+  "license": "GPL 3.0",
   "dependencies": {
     "foundation-sites": "~6.4.1",
     "jquery": ">=3.0.0",
@@ -50,7 +50,7 @@
     "url": "https://github.com/craftercms/craftercms-sphinx-theme.git"
   },
   "bugs": {
-    "url": "https://github.com/craftercms/craftercms-sphinx-theme/issues"
+    "url": "https://github.com/craftercms/craftercms/issues"
   },
   "babel": {
     "presets": [
