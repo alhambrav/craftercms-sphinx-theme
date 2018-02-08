@@ -99,3 +99,13 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+.DS_Store
+node_modules
+npm-debug.log
+bower_components
+dist
+*.swp
+.idea
+build
+craftercms_sphinx_theme.egg-info
