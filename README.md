@@ -44,7 +44,7 @@ At `src/assets/*` you'll find the other important parts ([s]css, js, imgs).
 As for the sphinx theme itself, see `src/sphinx`. The `craftercms_sphinx_theme/` directory is the
 build output to make into a python package (explained below).
 
-### Build
+## Build
 
 - Run `yarn crafter`. This will update the `craftercms_sphinx_theme` directory which is the python
 package to be built and published to PyPI
