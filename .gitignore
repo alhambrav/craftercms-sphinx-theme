@@ -109,3 +109,4 @@ dist
 .idea
 build
 craftercms_sphinx_theme.egg-info
+craftercms_sphinx_theme
